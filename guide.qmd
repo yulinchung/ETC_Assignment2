@@ -1,0 +1,36 @@
+---
+title: "GitHub reproducible workbook"
+author: "YU-LIN CHUNG, 35480351"
+format:
+    html:
+        toc: true
+        theme: solar
+    pdf:
+        toc: true
+---
+
+## INTRODUCTION
+This is an reproducible workbook to demonstrated the guide of knowledge of Git and GitHub usage.
+
+##
+
+### 1. Creating a new RStudio Project and Quarto file
+
+- First, you need to create a new RStudio Project called "ETC5513_Assignment2" and use the following command to create a simple qmd file called example.qmd:
+
+    - The command `cd` was used to move into the project folder. 
+        `cd ETC5513_Assignment2`
+    - The command `touch example.qmd` created a new empty Quarto file.
+        `touch example.qmd`
+
+- To make it be knitted into a HTML file, you need to write the YAMAL format of html and render it. 
+
+format:
+    html:
+        toc: true
+        theme: solar
+
+- The result of the knitted file
+After rendering the file, Quarto created an HTML output file called `example.html`. This shows that `example.qmd` was successfully knitted into an HTML file.
+
+![Rendered HTML output from `example.qmd`](images/example-html-result.png)
