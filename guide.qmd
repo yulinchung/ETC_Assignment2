@@ -109,3 +109,46 @@ git commit -m "Modify example.qmd on testbranch"
 git push -u origin testbranch
 ```
 
+\newpage
+### 4. Add the data and amend the previous commit
+
+**Next, we need to create a folder called data, and add the data from Assignment 1 to that folder.**
+
+- We need to made sure we are working on testbranch. The command `git branch` will show where you are with the asterisk symbol in fornt of the branch name.
+
+```bash
+git branch
+```
+
+- The command `mkdir` create a new folder.
+
+```bash
+mkdir data
+```
+
+- The command `cp` is used to copy the data in to the folder "data" .
+
+```bash
+cp "/Users/zhongyulin/assignment-1-creating-reproducible-reports-yulinchung/data/35480351_Yu-Lin Chung.csv" data/
+```
+
+- The command `cd` is used to move into sepcific folder and we can use `ls` to check that the file had been copied successfully.
+
+```bash
+cd data
+ls
+```
+
+**After that, we will learn how to amend the previous commit to include the data folder and push this amended commit to the remote.**
+
+- Instead of creating a new commit, we need to amend the previous commit. The command `git commit --amend` modifies the most recent commit. The option `-m` allows us to write a new commit message.
+
+```bash
+git commit --amend -m "Modify example.qmd and add data folder"
+```
+
+- Finally, we need to push it to the remote GitHub repository by using command `git push`. However, because we amended a commit that had already been pushed, the commit history changed. Therefore, we need to use `git push -f` rather than a normal `git push` to force GitHub to update the remote branch.
+
+```bash
+git push -f origin testbranch
+```

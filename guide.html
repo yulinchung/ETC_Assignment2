@@ -91,6 +91,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#creating-a-new-rstudio-project-and-quarto-file" id="toc-creating-a-new-rstudio-project-and-quarto-file" class="nav-link" data-scroll-target="#creating-a-new-rstudio-project-and-quarto-file">1. Creating a new RStudio Project and Quarto file</a></li>
   <li><a href="#initialising-the-folder-as-a-git-repository" id="toc-initialising-the-folder-as-a-git-repository" class="nav-link" data-scroll-target="#initialising-the-folder-as-a-git-repository">2. Initialising the folder as a Git repository</a></li>
   <li><a href="#create-the-new-branch-and-add-the-changes" id="toc-create-the-new-branch-and-add-the-changes" class="nav-link" data-scroll-target="#create-the-new-branch-and-add-the-changes">3. Create the new branch and add the changes</a></li>
+  <li><a href="#add-the-data-and-amend-the-previous-commit" id="toc-add-the-data-and-amend-the-previous-commit" class="nav-link" data-scroll-target="#add-the-data-and-amend-the-previous-commit">4. Add the data and amend the previous commit</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="guide.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -199,6 +200,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Finally, we need to push the new branch and its commit to the remote GitHub repository by using command <code>git push</code>. However, because it is the first time to push the new branch to GitHub, we need to set up upstream with <code>-u</code></li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin testbranch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="add-the-data-and-amend-the-previous-commit" class="level3">
+<h3 class="anchored" data-anchor-id="add-the-data-and-amend-the-previous-commit">4. Add the data and amend the previous commit</h3>
+<p><strong>Next, we need to create a folder called data, and add the data from Assignment 1 to that folder.</strong></p>
+<ul>
+<li>We need to made sure we are working on testbranch. The command <code>git branch</code> will show where you are with the asterisk symbol in fornt of the branch name.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>The command <code>mkdir</code> create a new folder.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> data</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>The command <code>cp</code> is used to copy the data in to the folder “data” .</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="st">"/Users/zhongyulin/assignment-1-creating-reproducible-reports-yulinchung/data/35480351_Yu-Lin Chung.csv"</span> data/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>The command <code>cd</code> is used to move into sepcific folder and we can use <code>ls</code> to check that the file had been copied successfully.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> data</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>After that, we will learn how to amend the previous commit to include the data folder and push this amended commit to the remote.</strong></p>
+<ul>
+<li>Instead of creating a new commit, we need to amend the previous commit. The command <code>git commit --amend</code> modifies the most recent commit. The option <code>-m</code> allows us to write a new commit message.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--amend</span> <span class="at">-m</span> <span class="st">"Modify example.qmd and add data folder"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Finally, we need to push it to the remote GitHub repository by using command <code>git push</code>. However, because we amended a commit that had already been pushed, the commit history changed. Therefore, we need to use <code>git push -f</code> rather than a normal <code>git push</code> to force GitHub to update the remote branch.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-f</span> origin testbranch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 
