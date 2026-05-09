@@ -12,10 +12,5 @@ format:
 ## INTRODUCTION
 This is an example .qmd for my assignment2.
 
-<<<<<<< HEAD
-### Changes of the main branch
-Change made on the main branch to create a conflict with testbranch.
-=======
-### Changes of the testbranch
-Change of the new branch call "testbranch"
->>>>>>> testbranch
+### Changes from both branches
+This section combines the changes made on branches of main and testbranch. The main branch was modified to create a merge conflict and testbranch was modified earlier to demonstrate branch-based changes.

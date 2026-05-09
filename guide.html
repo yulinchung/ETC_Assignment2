@@ -88,11 +88,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">INTRODUCTION</a></li>
   <li><a href="#working-guideline" id="toc-working-guideline" class="nav-link" data-scroll-target="#working-guideline">WORKING GUIDELINE</a>
   <ul class="collapse">
-  <li><a href="#creating-a-new-rstudio-project-and-quarto-file" id="toc-creating-a-new-rstudio-project-and-quarto-file" class="nav-link" data-scroll-target="#creating-a-new-rstudio-project-and-quarto-file">1. Creating a new RStudio Project and Quarto file</a></li>
+  <li><a href="#creating-a-new-rstudio-project-and-quarto-file." id="toc-creating-a-new-rstudio-project-and-quarto-file." class="nav-link" data-scroll-target="#creating-a-new-rstudio-project-and-quarto-file.">1. Creating a new RStudio Project and Quarto file.</a></li>
   <li><a href="#initialising-the-folder-as-a-git-repository" id="toc-initialising-the-folder-as-a-git-repository" class="nav-link" data-scroll-target="#initialising-the-folder-as-a-git-repository">2. Initialising the folder as a Git repository</a></li>
-  <li><a href="#create-the-new-branch-and-add-the-changes" id="toc-create-the-new-branch-and-add-the-changes" class="nav-link" data-scroll-target="#create-the-new-branch-and-add-the-changes">3. Create the new branch and add the changes</a></li>
-  <li><a href="#add-the-data-and-amend-the-previous-commit" id="toc-add-the-data-and-amend-the-previous-commit" class="nav-link" data-scroll-target="#add-the-data-and-amend-the-previous-commit">4. Add the data and amend the previous commit</a></li>
-  <li><a href="#create-merge-conflict" id="toc-create-merge-conflict" class="nav-link" data-scroll-target="#create-merge-conflict">5. Create merge conflict</a></li>
+  <li><a href="#creating-the-new-branch-and-add-the-changes." id="toc-creating-the-new-branch-and-add-the-changes." class="nav-link" data-scroll-target="#creating-the-new-branch-and-add-the-changes.">3. Creating the new branch and add the changes.</a></li>
+  <li><a href="#adding-data-and-amend-the-previous-commit" id="toc-adding-data-and-amend-the-previous-commit" class="nav-link" data-scroll-target="#adding-data-and-amend-the-previous-commit">4. Adding data and amend the previous commit</a></li>
+  <li><a href="#creating-merge-conflict" id="toc-creating-merge-conflict" class="nav-link" data-scroll-target="#creating-merge-conflict">5. Creating merge conflict</a></li>
   <li><a href="#deal-with-merge-conflict" id="toc-deal-with-merge-conflict" class="nav-link" data-scroll-target="#deal-with-merge-conflict">6. Deal with merge conflict</a></li>
   </ul></li>
   </ul>
@@ -127,15 +127,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="introduction" class="level1">
 <h1>INTRODUCTION</h1>
-<p>This is an reproducible workbook to demonstrated the guide of knowledge of Git and GitHub usage.</p>
+<p>This is a reproducible workbook that demonstrates the knowledge of Git and GitHub usage. To help you understand who to use these tools efficiently for version control and collaboration, we will follow the instrctions to complete some tasks.</p>
+<div style="page-break-after: always;"></div>
 </section>
 <section id="working-guideline" class="level1">
 <h1>WORKING GUIDELINE</h1>
-<section id="creating-a-new-rstudio-project-and-quarto-file" class="level3">
-<h3 class="anchored" data-anchor-id="creating-a-new-rstudio-project-and-quarto-file">1. Creating a new RStudio Project and Quarto file</h3>
+<section id="creating-a-new-rstudio-project-and-quarto-file." class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-new-rstudio-project-and-quarto-file.">1. Creating a new RStudio Project and Quarto file.</h3>
 <p><strong>First, you need to create a new RStudio Project called “ETC5513_Assignment2” and use the following command to create a simple qmd file called example.qmd.</strong></p>
 <ul>
-<li>The command <code>cd</code> is used to move your head into the project folder.</li>
+<li>The command <code>cd</code> is used to move into the project folder.</li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ETC5513_Assignment2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
@@ -156,9 +157,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
-<li>The command <code>ls</code> will list all of the file in “ETC5513_Assignment2”. It can be seen that we successfully knitted the file into HTML when there is a file call “example .html”</li>
+<li>The command <code>ls</code> will list all of the file in “ETC5513_Assignment2”. It can be seen that we successfully knitted the file into HTML when there is a file call “example.html”</li>
 </ul>
-<p><img src="images/example-html-result.png" class="img-fluid"></p>
+<p><img src="images/html_result.png" class="img-fluid"></p>
 <div style="page-break-after: always;"></div>
 </section>
 <section id="initialising-the-folder-as-a-git-repository" class="level3">
@@ -169,7 +170,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>The command <code>git add</code> will add the change into the staging area. The dot means the current directory. THerefore, <code>git add .</code> stages all changes in the current project folder.</li>
+<li>The command <code>git add</code> will add the change into the staging area. The dot means the current directory. Therefore, <code>git add .</code> stages all changes in the current project folder.</li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
@@ -178,11 +179,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Inital update"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div style="page-break-after: always;"></div>
 </section>
-<section id="create-the-new-branch-and-add-the-changes" class="level3">
-<h3 class="anchored" data-anchor-id="create-the-new-branch-and-add-the-changes">3. Create the new branch and add the changes</h3>
+<section id="creating-the-new-branch-and-add-the-changes." class="level3">
+<h3 class="anchored" data-anchor-id="creating-the-new-branch-and-add-the-changes.">3. Creating the new branch and add the changes.</h3>
 <p><strong>Now we need to do two things: First, create a new branch called testbranch. Second, modify the file example.qmd and add the changes to both the local and remote repositories.</strong></p>
 <ul>
-<li>To make sure we are in the main branch. The command <code>git branch</code> can ensure where you are if you see an asterisk symbol in fornt of the branch name.</li>
+<li>To make sure we are in the main branch. The command <code>git branch</code> can ensure where you are if you see an asterisk symbol in front of the branch name.</li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
@@ -204,11 +205,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin testbranch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div style="page-break-after: always;"></div>
 </section>
-<section id="add-the-data-and-amend-the-previous-commit" class="level3">
-<h3 class="anchored" data-anchor-id="add-the-data-and-amend-the-previous-commit">4. Add the data and amend the previous commit</h3>
+<section id="adding-data-and-amend-the-previous-commit" class="level3">
+<h3 class="anchored" data-anchor-id="adding-data-and-amend-the-previous-commit">4. Adding data and amend the previous commit</h3>
 <p><strong>Next, we need to create a folder called data, and add the data from Assignment 1 to that folder.</strong></p>
 <ul>
-<li>We need to made sure we are working on testbranch. The command <code>git branch</code> will show where you are with the asterisk symbol in fornt of the branch name.</li>
+<li>We need to make sure we are working on testbranch. The command <code>git branch</code> will show where you are with the asterisk symbol in fornt of the branch name.</li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
@@ -220,7 +221,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="st">"/Users/zhongyulin/assignment-1-creating-reproducible-reports-yulinchung/data/35480351_Yu-Lin Chung.csv"</span> data/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>The command <code>cd</code> is used to move into sepcific folder and we can use <code>ls</code> to check that the file had been copied successfully.</li>
+<li>The command <code>cd</code> is used to move into specific folder and we can use <code>ls</code> to check that the file had been copied successfully.</li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> data</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -235,10 +236,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-f</span> origin testbranch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div style="page-break-after: always;"></div>
 </section>
-<section id="create-merge-conflict" class="level3">
-<h3 class="anchored" data-anchor-id="create-merge-conflict">5. Create merge conflict</h3>
+<section id="creating-merge-conflict" class="level3">
+<h3 class="anchored" data-anchor-id="creating-merge-conflict">5. Creating merge conflict</h3>
 <ul>
-<li>Typing some similar content in main branch as the same position in testbranch.</li>
+<li>First, we need to switch back to the <code>main</code> branch.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>To create the conflict, we should types some similar content in main branch as the same position in testbranch.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -252,9 +257,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>content in main</figcaption>
 </figure>
 </div>
+<ul>
+<li>After modifying the file, we add and commit the change, and try to push the change to GitHub.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add example.qmd</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Modify example.qmd on main"</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="deal-with-merge-conflict" class="level3">
 <h3 class="anchored" data-anchor-id="deal-with-merge-conflict">6. Deal with merge conflict</h3>
+<ul>
+<li>To merge <code>testbranch</code> into <code>main</code>, we use the command <code>git merge</code></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> merge testbranch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>After completing the steps above, we will find that the system reminds us there is a conflict.</li>
+</ul>
+<p><img src="images/merge_conflict_1.png" class="img-fluid"></p>
+<ul>
+<li>We need to fix the merge conflict.</li>
+</ul>
+<p><img src="images/merge_conflict_2.png" class="img-fluid"></p>
+<p><img src="images/merge_conflict_3.png" class="img-fluid"></p>
+<ul>
+<li>After resolving the conflict, we can use <code>git status</code> to check the current status. This command shows whether all conflicts have been fixed and whether the files are ready to commit.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>After the conflict was fixed, we used <code>git add</code> to add the changes into the staging area. Then, we commit the resolved merge conflict. This commit records the final version after merging testbranch into main. Finally, we push the merge commit to the remote GitHub repository.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add example.qmd</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Resolve merge conflict"</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>After pushing, we can refresh the GitHub repository page and check the <code>main</code> branch. The latest commit message is “Resolve merge conflict”, which shows that the merge result has been pushed to GitHub.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/slove_merge_conflict.png" class="img-fluid figure-img"></p>
+<figcaption>the GitHub status</figcaption>
+</figure>
+</div>
 </section>
 </section>
 

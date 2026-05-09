@@ -10,15 +10,16 @@ format:
 ---
 
 # INTRODUCTION
-This is an reproducible workbook to demonstrated the guide of knowledge of Git and GitHub usage.
+This is a reproducible workbook that demonstrates the knowledge of Git and GitHub usage. To help you understand who to use these tools efficiently for version control and collaboration, we will follow the instrctions to complete some tasks.
 
+\newpage
 # WORKING GUIDELINE
 
-### 1. Creating a new RStudio Project and Quarto file
+### 1. Creating a new RStudio Project and Quarto file.
 
 **First, you need to create a new RStudio Project called "ETC5513_Assignment2" and use the following command to create a simple qmd file called example.qmd.**
 
-- The command `cd` is used to move your head into the project folder. 
+- The command `cd` is used to move into the project folder. 
 
 ```bash
 cd ETC5513_Assignment2
@@ -45,9 +46,9 @@ format:
 ---
 ```
 
-- The command `ls` will list all of the file in "ETC5513_Assignment2". It can be seen that we successfully knitted the file into HTML when there is a file call "example .html"
+- The command `ls` will list all of the file in "ETC5513_Assignment2". It can be seen that we successfully knitted the file into HTML when there is a file call "example.html"
 
-![](images/example-html-result.png)
+![](images/html_result.png)
 
 
 \newpage
@@ -61,7 +62,7 @@ format:
 git init
 ```
 
-- The command `git add` will add the change into the staging area. The dot means the current directory. THerefore, `git add .` stages all changes in the current project folder.
+- The command `git add` will add the change into the staging area. The dot means the current directory. Therefore, `git add .` stages all changes in the current project folder.
 
 ```bash
 git add .
@@ -74,11 +75,11 @@ git commit -m "Inital update"
 ```
 
 \newpage
-### 3. Create the new branch and add the changes
+### 3. Creating the new branch and add the changes.
 
 **Now we need to do two things: First, create a new branch called testbranch. Second, modify the file example.qmd and add the changes to both the local and remote repositories.**
 
-- To make sure we are in the main branch. The command `git branch` can ensure where you are if you see an asterisk symbol in fornt of the branch name.
+- To make sure we are in the main branch. The command `git branch` can ensure where you are if you see an asterisk symbol in front of the branch name.
 
 ```bash
 git branch
@@ -110,11 +111,11 @@ git push -u origin testbranch
 ```
 
 \newpage
-### 4. Add the data and amend the previous commit
+### 4. Adding data and amend the previous commit
 
 **Next, we need to create a folder called data, and add the data from Assignment 1 to that folder.**
 
-- We need to made sure we are working on testbranch. The command `git branch` will show where you are with the asterisk symbol in fornt of the branch name.
+- We need to make sure we are working on testbranch. The command `git branch` will show where you are with the asterisk symbol in fornt of the branch name.
 
 ```bash
 git branch
@@ -132,7 +133,7 @@ mkdir data
 cp "/Users/zhongyulin/assignment-1-creating-reproducible-reports-yulinchung/data/35480351_Yu-Lin Chung.csv" data/
 ```
 
-- The command `cd` is used to move into sepcific folder and we can use `ls` to check that the file had been copied successfully.
+- The command `cd` is used to move into specific folder and we can use `ls` to check that the file had been copied successfully.
 
 ```bash
 cd data
@@ -154,12 +155,61 @@ git push -f origin testbranch
 ```
 
 \newpage
-### 5. Create merge conflict
+### 5. Creating merge conflict
 
-- Typing some similar content in main branch as the same position in testbranch.
+- First, we need to switch back to the `main` branch.
+
+```bash
+git switch main
+```
+
+- To create the conflict, we should types some similar content in main branch as the same position in testbranch.
 
 ![content in testbranch](images/content_testbranch.png)
 
 ![content in main](images/content_mian.png)
 
+- After modifying the file, we add and commit the change, and try to push the change to GitHub.
+
+```bash
+git add example.qmd
+git commit -m "Modify example.qmd on main"
+git push
+```
+
 ### 6. Deal with merge conflict
+
+- To merge `testbranch` into `main`, we use the command `git merge`
+
+```bash
+git merge testbranch
+```
+
+- After completing the steps above, we will find that the system reminds us there is a conflict.
+
+![](images/merge_conflict_1.png)
+
+- We need to fix the merge conflict.
+
+![](images/merge_conflict_2.png)
+
+![](images/merge_conflict_3.png)
+
+- After resolving the conflict, we can use `git status` to check the current status. This command shows whether all conflicts have been fixed and whether the files are ready to commit.
+
+```bash
+git status
+```
+
+- After the conflict was fixed, we used `git add` to add the changes into the staging area. Then, we commit the resolved merge conflict. This commit records the final version after merging testbranch into main. Finally, we push the merge commit to the remote GitHub repository.
+
+```bash
+git add example.qmd
+git commit -m "Resolve merge conflict"
+git push
+```
+
+- After pushing, we can refresh the GitHub repository page and check the `main` branch. The latest commit message is "Resolve merge conflict", which shows that the merge result has been pushed to GitHub.
+
+![the GitHub status](images/slove_merge_conflict.png)
+
