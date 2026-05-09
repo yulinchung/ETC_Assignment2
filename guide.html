@@ -24,6 +24,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -51,9 +86,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">INTRODUCTION</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a>
+  <li><a href="#working-guideline" id="toc-working-guideline" class="nav-link" data-scroll-target="#working-guideline">WORKING GUIDELINE</a>
   <ul class="collapse">
   <li><a href="#creating-a-new-rstudio-project-and-quarto-file" id="toc-creating-a-new-rstudio-project-and-quarto-file" class="nav-link" data-scroll-target="#creating-a-new-rstudio-project-and-quarto-file">1. Creating a new RStudio Project and Quarto file</a></li>
+  <li><a href="#initialising-the-folder-as-a-git-repository" id="toc-initialising-the-folder-as-a-git-repository" class="nav-link" data-scroll-target="#initialising-the-folder-as-a-git-repository">2. Initialising the folder as a Git repository</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="guide.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -85,32 +121,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">INTRODUCTION</h2>
-<p>This is an reproducible workbook to demonstrated the guide of knowledge of Git and GitHub usage.</p>
+<section id="introduction" class="level1">
+<h1>INTRODUCTION</h1>
+<p><strong>This is an reproducible workbook to demonstrated the guide of knowledge of Git and GitHub usage.</strong></p>
 </section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="working-guideline" class="level1">
+<h1>WORKING GUIDELINE</h1>
 <section id="creating-a-new-rstudio-project-and-quarto-file" class="level3">
 <h3 class="anchored" data-anchor-id="creating-a-new-rstudio-project-and-quarto-file">1. Creating a new RStudio Project and Quarto file</h3>
+<p><strong>First, you need to create a new RStudio Project called “ETC5513_Assignment2” and use the following command to create a simple qmd file called example.qmd:</strong></p>
 <ul>
-<li><p>First, you need to create a new RStudio Project called “ETC5513_Assignment2” and use the following command to create a simple qmd file called example.qmd:</p>
-<ul>
-<li>The command <code>cd</code> was used to move into the project folder. <code>cd ETC5513_Assignment2</code></li>
-<li>The command <code>touch example.qmd</code> created a new empty Quarto file. <code>touch example.qmd</code></li>
-</ul></li>
-<li><p>To make it be knitted into a HTML file, you need to write the YAMAL format of html and render it.</p></li>
+<li>The command <code>cd</code> is used to move your head into the project folder.</li>
 </ul>
-<p>format: html: toc: true theme: solar</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ETC5513_Assignment2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li>The result of the knitted file After rendering the file, Quarto created an HTML output file called <code>example.html</code>. This shows that <code>example.qmd</code> was successfully knitted into an HTML file.</li>
+<li>The command <code>touch filename.qmd</code> create a new empty Quarto file.</li>
 </ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/example-html-result.png" class="img-fluid figure-img"></p>
-<figcaption>Rendered HTML output from <code>example.qmd</code></figcaption>
-</figure>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> example.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>To make it be knitted into a HTML file, you need to write the YAML format of html and render it.</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"GitHub reproducible workbook"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>author<span class="sc">:</span> <span class="st">"YU-LIN CHUNG, 35480351"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    html<span class="sc">:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        toc<span class="sc">:</span> true</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        theme<span class="sc">:</span> solar</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<ul>
+<li>The command <code>ls</code> will list all of the file in “ETC5513_Assignment2”. It can be seen that we successfully knitted the file into HTML when there is a file call “example .html”</li>
+</ul>
+<p><img src="images/example-html-result.png" class="img-fluid"></p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="initialising-the-folder-as-a-git-repository" class="level3">
+<h3 class="anchored" data-anchor-id="initialising-the-folder-as-a-git-repository">2. Initialising the folder as a Git repository</h3>
+<p><strong>After creating and rendering example.qmd, we can use the following command to initialise the project folder as a Git repository.</strong></p>
+<ul>
+<li>The command <code>git init</code> create a new local Git repository in the project folder.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>The command <code>git add</code> will add the change into the staging area. The dot means the current directory. THerefore, <code>git add .</code> stages all changes in the current project folder.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>The command <code>git commit</code> create the first commit in the repository. We usually add the message with <code>-m</code> to remind us for our implement.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Inital update"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 

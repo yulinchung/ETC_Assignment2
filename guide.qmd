@@ -9,28 +9,68 @@ format:
         toc: true
 ---
 
-## INTRODUCTION
+# INTRODUCTION
 This is an reproducible workbook to demonstrated the guide of knowledge of Git and GitHub usage.
 
-##
+# WORKING GUIDELINE
 
 ### 1. Creating a new RStudio Project and Quarto file
 
-- First, you need to create a new RStudio Project called "ETC5513_Assignment2" and use the following command to create a simple qmd file called example.qmd:
+**First, you need to create a new RStudio Project called "ETC5513_Assignment2" and use the following command to create a simple qmd file called example.qmd.**
 
-    - The command `cd` was used to move into the project folder. 
-        `cd ETC5513_Assignment2`
-    - The command `touch example.qmd` created a new empty Quarto file.
-        `touch example.qmd`
+- The command `cd` is used to move your head into the project folder. 
 
-- To make it be knitted into a HTML file, you need to write the YAMAL format of html and render it. 
+```bash
+cd ETC5513_Assignment2
+```
 
+- The command `touch filename.qmd` create a new empty Quarto file.
+
+```bash
+touch example.qmd
+ ```
+
+- To make it be knitted into a HTML file, you need to write the YAML format of html and render it. 
+ 
+```{r}
+#| echo: true
+#| eval: false
+---
+title: "GitHub reproducible workbook"
+author: "YU-LIN CHUNG, 35480351"
 format:
     html:
         toc: true
         theme: solar
+---
+```
 
-- The result of the knitted file
-After rendering the file, Quarto created an HTML output file called `example.html`. This shows that `example.qmd` was successfully knitted into an HTML file.
+- The command `ls` will list all of the file in "ETC5513_Assignment2". It can be seen that we successfully knitted the file into HTML when there is a file call "example .html"
 
-![Rendered HTML output from `example.qmd`](images/example-html-result.png)
+![](images/example-html-result.png)
+
+
+\newpage
+### 2. Initialising the folder as a Git repository
+
+**After creating and rendering example.qmd, we can use the following command to initialise the project folder as a Git repository.**
+
+- The command `git init` create a new local Git repository in the project folder. 
+
+```bash
+git init
+```
+
+- The command `git add` will add the change into the staging area. The dot means the current directory. THerefore, `git add .` stages all changes in the current project folder.
+
+```bash
+git add .
+```
+
+- The command `git commit` create the first commit in the repository. We usually add the message with `-m` to remind us for our implement.
+
+```bash
+git commit -m "Inital update"
+```
+
+
