@@ -12,5 +12,10 @@ format:
 ## INTRODUCTION
 This is an example .qmd for my assignment2.
 
+<<<<<<< HEAD
 ### Changes of the main branch
 Change made on the main branch to create a conflict with testbranch.
+=======
+### Changes of the testbranch
+Change of the new branch call "testbranch"
+>>>>>>> testbranch
