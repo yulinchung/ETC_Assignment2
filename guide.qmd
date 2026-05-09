@@ -156,14 +156,10 @@ git push -f origin testbranch
 \newpage
 ### 5. Create merge conflict
 
-- Typing some similar content in main branch 
+- Typing some similar content in main branch as the same position in testbranch.
 
+![content in testbranch](images/content_testbranch.png)
 
+![content in main](images/content_mian.png)
 
-```bash
-git commit --amend -m "Modify example.qmd and add data folder"
-```
-
-
-\newpage
 ### 6. Deal with merge conflict

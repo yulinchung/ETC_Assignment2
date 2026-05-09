@@ -92,6 +92,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#initialising-the-folder-as-a-git-repository" id="toc-initialising-the-folder-as-a-git-repository" class="nav-link" data-scroll-target="#initialising-the-folder-as-a-git-repository">2. Initialising the folder as a Git repository</a></li>
   <li><a href="#create-the-new-branch-and-add-the-changes" id="toc-create-the-new-branch-and-add-the-changes" class="nav-link" data-scroll-target="#create-the-new-branch-and-add-the-changes">3. Create the new branch and add the changes</a></li>
   <li><a href="#add-the-data-and-amend-the-previous-commit" id="toc-add-the-data-and-amend-the-previous-commit" class="nav-link" data-scroll-target="#add-the-data-and-amend-the-previous-commit">4. Add the data and amend the previous commit</a></li>
+  <li><a href="#create-merge-conflict" id="toc-create-merge-conflict" class="nav-link" data-scroll-target="#create-merge-conflict">5. Create merge conflict</a></li>
+  <li><a href="#deal-with-merge-conflict" id="toc-deal-with-merge-conflict" class="nav-link" data-scroll-target="#deal-with-merge-conflict">6. Deal with merge conflict</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="guide.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -231,6 +233,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Finally, we need to push it to the remote GitHub repository by using command <code>git push</code>. However, because we amended a commit that had already been pushed, the commit history changed. Therefore, we need to use <code>git push -f</code> rather than a normal <code>git push</code> to force GitHub to update the remote branch.</li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-f</span> origin testbranch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="create-merge-conflict" class="level3">
+<h3 class="anchored" data-anchor-id="create-merge-conflict">5. Create merge conflict</h3>
+<ul>
+<li>Typing some similar content in main branch as the same position in testbranch.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/content_testbranch.png" class="img-fluid figure-img"></p>
+<figcaption>content in testbranch</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/content_mian.png" class="img-fluid figure-img"></p>
+<figcaption>content in main</figcaption>
+</figure>
+</div>
+</section>
+<section id="deal-with-merge-conflict" class="level3">
+<h3 class="anchored" data-anchor-id="deal-with-merge-conflict">6. Deal with merge conflict</h3>
 </section>
 </section>
 
