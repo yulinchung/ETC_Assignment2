@@ -1,0 +1,13 @@
+---
+title: "GitHub reproducible workbook"
+author: "YU-LIN CHUNG, 35480351"
+format:
+    html:
+        toc: true
+        theme: solar
+    pdf:
+        toc: true
+---
+
+## INTRODUCTION
+This is an example .qmd for my assignment2.
