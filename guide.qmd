@@ -73,4 +73,39 @@ git add .
 git commit -m "Inital update"
 ```
 
+\newpage
+### 3. Create the new branch and add the changes
+
+**Now we need to do two things: First, create a new branch called testbranch. Second, modify the file example.qmd and add the changes to both the local and remote repositories.**
+
+- To make sure we are in the main branch. The command `git branch` can ensure where you are if you see an asterisk symbol in fornt of the branch name.
+
+```bash
+git branch
+```
+
+- The command `git switch` will create a new branch and switch you to this branch.
+
+```bash
+git switch -c testbranch
+```
+
+- After modifying example.qmd, we can use `git status` to check the status of it.
+
+```bash
+git status
+```
+
+- Following the above steps, we need to add the modified file to the staging area with the command `git add` and commit the change to the local repository with the command `git commit` and write the message for it.
+
+```bash
+git add example.qmd
+git commit -m "Modify example.qmd on testbranch"
+```
+
+- Finally, we need to push the new branch and its commit to the remote GitHub repository by using command `git push`. However, because it is the first time to push the new branch to GitHub, we need to set up upstream with `-u`
+
+```bash
+git push -u origin testbranch
+```
 
