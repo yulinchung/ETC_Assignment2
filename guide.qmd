@@ -152,3 +152,18 @@ git commit --amend -m "Modify example.qmd and add data folder"
 ```bash
 git push -f origin testbranch
 ```
+
+\newpage
+### 5. Create merge conflict
+
+- Typing some similar content in main branch 
+
+
+
+```bash
+git commit --amend -m "Modify example.qmd and add data folder"
+```
+
+
+\newpage
+### 6. Deal with merge conflict
