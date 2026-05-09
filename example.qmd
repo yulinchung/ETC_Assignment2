@@ -11,3 +11,6 @@ format:
 
 ## INTRODUCTION
 This is an example .qmd for my assignment2.
+
+### Changes of the main branch
+Change made on the main branch to create a conflict with testbranch.
