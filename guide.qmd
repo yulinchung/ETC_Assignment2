@@ -241,3 +241,40 @@ git show v1.0
 ```bash
 git push origin v1.0
 ```
+
+\newpage
+### 8. Deleting branch locally and on the remote
+
+**In this step, we need to delete the branch called testbranch both locally and on the remote GitHub repository.**
+
+- First, we need to make sure we are not working on `testbranch`. We can use `git branch` to check the current branch with the asterisk symbol in front of it. The command `git switch` move us into the branch we want. 
+
+```bash
+git branch
+git switch main
+```
+
+- we can delete the local branch by using `git branch -d`.
+
+```bash
+git branch -d testbranch
+```
+
+- The command `git push origin --delete` deletes the branch from the remote repository.
+
+```bash
+git push origin --delete testbranch
+```
+
+\newpage
+### 9. Show the commit log in condensed form in the terminal.
+
+**In this step, we need to show the commit history in a condensed form in the terminal. A condensed commit log is easier to read because it shows each commit on one line.**
+
+- The command `git log --oneline` shows the commit history in a shorter format.
+
+```bash
+git log --oneline
+```
+
+![](images/git_log.png)

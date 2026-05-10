@@ -95,6 +95,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#creating-merge-conflict" id="toc-creating-merge-conflict" class="nav-link" data-scroll-target="#creating-merge-conflict">5. Creating merge conflict</a></li>
   <li><a href="#deal-with-merge-conflict" id="toc-deal-with-merge-conflict" class="nav-link" data-scroll-target="#deal-with-merge-conflict">6. Deal with merge conflict</a></li>
   <li><a href="#annotated-tag" id="toc-annotated-tag" class="nav-link" data-scroll-target="#annotated-tag">7. Annotated tag</a></li>
+  <li><a href="#deleting-branch-locally-and-on-the-remote" id="toc-deleting-branch-locally-and-on-the-remote" class="nav-link" data-scroll-target="#deleting-branch-locally-and-on-the-remote">8. Deleting branch locally and on the remote</a></li>
+  <li><a href="#show-the-commit-log-in-condensed-form-in-the-terminal." id="toc-show-the-commit-log-in-condensed-form-in-the-terminal." class="nav-link" data-scroll-target="#show-the-commit-log-in-condensed-form-in-the-terminal.">9. Show the commit log in condensed form in the terminal.</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="guide.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -320,6 +322,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Finally, we need to push the tag to the remote GitHub repository.</li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin v1.0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="deleting-branch-locally-and-on-the-remote" class="level3">
+<h3 class="anchored" data-anchor-id="deleting-branch-locally-and-on-the-remote">8. Deleting branch locally and on the remote</h3>
+<p><strong>In this step, we need to delete the branch called testbranch both locally and on the remote GitHub repository.</strong></p>
+<ul>
+<li>First, we need to make sure we are not working on <code>testbranch</code>. We can use <code>git branch</code> to check the current branch with the asterisk symbol in front of it. The command <code>git switch</code> move us into the branch we want.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>we can delete the local branch by using <code>git branch -d</code>.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> testbranch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>The command <code>git push origin --delete</code> deletes the branch from the remote repository.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin <span class="at">--delete</span> testbranch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="show-the-commit-log-in-condensed-form-in-the-terminal." class="level3">
+<h3 class="anchored" data-anchor-id="show-the-commit-log-in-condensed-form-in-the-terminal.">9. Show the commit log in condensed form in the terminal.</h3>
+<p><strong>In this step, we need to show the commit history in a condensed form in the terminal. A condensed commit log is easier to read because it shows each commit on one line.</strong></p>
+<ul>
+<li>The command <code>git log --oneline</code> shows the commit history in a shorter format.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><img src="images/git_log.png" class="img-fluid"></p>
 </section>
 </section>
 
