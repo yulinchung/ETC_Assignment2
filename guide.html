@@ -94,6 +94,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#adding-data-and-amend-the-previous-commit" id="toc-adding-data-and-amend-the-previous-commit" class="nav-link" data-scroll-target="#adding-data-and-amend-the-previous-commit">4. Adding data and amend the previous commit</a></li>
   <li><a href="#creating-merge-conflict" id="toc-creating-merge-conflict" class="nav-link" data-scroll-target="#creating-merge-conflict">5. Creating merge conflict</a></li>
   <li><a href="#deal-with-merge-conflict" id="toc-deal-with-merge-conflict" class="nav-link" data-scroll-target="#deal-with-merge-conflict">6. Deal with merge conflict</a></li>
+  <li><a href="#annotated-tag" id="toc-annotated-tag" class="nav-link" data-scroll-target="#annotated-tag">7. Annotated tag</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="guide.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -298,6 +299,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>the GitHub status</figcaption>
 </figure>
 </div>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="annotated-tag" class="level3">
+<h3 class="anchored" data-anchor-id="annotated-tag">7. Annotated tag</h3>
+<p><strong>The next step, we need to tag the commit of sloving merge conflict v1.0 on main using an annotated tag.</strong></p>
+<ul>
+<li>Before creating the tag, we can use <code>git log --oneline</code> to check the commit history and find the commit that we want to tag.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>The command <code>git tag -a</code> means to create an annotated tag and the option <code>-m</code> allows us to write a message for the tag. Because I made another commit after resolving the merge conflict, we need to type the commit hash to make sure we add the annotated tag on the write place.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> tag <span class="at">-a</span> v1.0 27aeb14 <span class="at">-m</span> <span class="st">"Version 1.0"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>To check more details about the tag, we can use <code>git show</code>. This command shows the tag message and the commit that the tag points to.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> show v1.0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Finally, we need to push the tag to the remote GitHub repository.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin v1.0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 

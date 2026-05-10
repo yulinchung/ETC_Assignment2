@@ -213,3 +213,31 @@ git push
 
 ![the GitHub status](images/slove_merge_conflict.png)
 
+\newpage
+### 7. Annotated tag
+
+**The next step, we need to tag the commit of sloving merge conflict v1.0 on main using an annotated tag.**
+
+- Before creating the tag, we can use `git log --oneline` to check the commit history and find the commit that we want to tag.
+
+```bash
+git log --oneline
+```
+
+- The command `git tag -a` means to create an annotated tag and the option `-m` allows us to write a message for the tag. Because I made another commit after resolving the merge conflict, we need to type the commit hash to make sure we add the annotated tag on the write place.
+
+```bash
+git tag -a v1.0 27aeb14 -m "Version 1.0"
+```
+
+- To check more details about the tag, we can use `git show`. This command shows the tag message and the commit that the tag points to.
+
+```bash
+git show v1.0
+```
+
+- Finally, we need to push the tag to the remote GitHub repository. 
+
+```bash
+git push origin v1.0
+```
