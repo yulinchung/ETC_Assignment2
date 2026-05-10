@@ -97,7 +97,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#annotated-tag" id="toc-annotated-tag" class="nav-link" data-scroll-target="#annotated-tag">7. Annotated tag</a></li>
   <li><a href="#deleting-branch-locally-and-on-the-remote" id="toc-deleting-branch-locally-and-on-the-remote" class="nav-link" data-scroll-target="#deleting-branch-locally-and-on-the-remote">8. Deleting branch locally and on the remote</a></li>
   <li><a href="#show-the-commit-log-in-condensed-form-in-the-terminal." id="toc-show-the-commit-log-in-condensed-form-in-the-terminal." class="nav-link" data-scroll-target="#show-the-commit-log-in-condensed-form-in-the-terminal.">9. Show the commit log in condensed form in the terminal.</a></li>
-  <li><a href="#add-a-simple-plot-and-undo-the-commit-without-losing-local-changes" id="toc-add-a-simple-plot-and-undo-the-commit-without-losing-local-changes" class="nav-link" data-scroll-target="#add-a-simple-plot-and-undo-the-commit-without-losing-local-changes">10. Add a simple plot and undo the commit without losing local changes</a></li>
+  <li><a href="#undo-the-commit" id="toc-undo-the-commit" class="nav-link" data-scroll-target="#undo-the-commit">10. Undo the commit</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="guide.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -131,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="introduction" class="level1">
 <h1>INTRODUCTION</h1>
-<p>This is a reproducible workbook that demonstrates the knowledge of Git and GitHub usage. To help you understand who to use these tools efficiently for version control and collaboration, we will follow the instrctions to complete some tasks.</p>
+<p>This is a reproducible workbook that demonstrates the knowledge of Git and GitHub usage. To help you understand how to use these tools efficiently for version control and collaboration, we will follow instrctions to complete some tasks.</p>
 <div style="page-break-after: always;"></div>
 </section>
 <section id="working-guideline" class="level1">
@@ -213,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="adding-data-and-amend-the-previous-commit">4. Adding data and amend the previous commit</h3>
 <p><strong>Next, we need to create a folder called data, and add the data from Assignment 1 to that folder.</strong></p>
 <ul>
-<li>We need to make sure we are working on testbranch. The command <code>git branch</code> will show where you are with the asterisk symbol in fornt of the branch name.</li>
+<li>We need to make sure we are working on testbranch. The command <code>git branch</code> will show where you are with the asterisk symbol in front of the branch name.</li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
@@ -306,7 +306,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="annotated-tag" class="level3">
 <h3 class="anchored" data-anchor-id="annotated-tag">7. Annotated tag</h3>
-<p><strong>The next step, we need to tag the commit of sloving merge conflict v1.0 on main using an annotated tag.</strong></p>
+<p><strong>The next step, we need to tag the commit of solving merge conflict v1.0 on main using an annotated tag.</strong></p>
 <ul>
 <li>Before creating the tag, we can use <code>git log --oneline</code> to check the commit history and find the commit that we want to tag.</li>
 </ul>
@@ -353,8 +353,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="images/git_log.png" class="img-fluid"></p>
 <div style="page-break-after: always;"></div>
 </section>
-<section id="add-a-simple-plot-and-undo-the-commit-without-losing-local-changes" class="level3">
-<h3 class="anchored" data-anchor-id="add-a-simple-plot-and-undo-the-commit-without-losing-local-changes">10. Add a simple plot and undo the commit without losing local changes</h3>
+<section id="undo-the-commit" class="level3">
+<h3 class="anchored" data-anchor-id="undo-the-commit">10. Undo the commit</h3>
 <p><strong>In this step, we need to create a new section in example.qmd that includes an easy plot. In this part, we commit the change and use the command line interface to undo the commit without losing the local changes.</strong></p>
 <ul>
 <li>After saving example.qmd, we add the modified file to the staging area and commit the change.</li>
@@ -373,6 +373,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Finally, we use git status to check the result.</li>
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><img src="images/undo.png" class="img-fluid"></p>
 </section>
 </section>
 

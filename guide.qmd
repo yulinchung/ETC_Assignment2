@@ -10,7 +10,7 @@ format:
 ---
 
 # INTRODUCTION
-This is a reproducible workbook that demonstrates the knowledge of Git and GitHub usage. To help you understand who to use these tools efficiently for version control and collaboration, we will follow the instrctions to complete some tasks.
+This is a reproducible workbook that demonstrates the knowledge of Git and GitHub usage. To help you understand how to use these tools efficiently for version control and collaboration, we will follow instrctions to complete some tasks.
 
 \newpage
 # WORKING GUIDELINE
@@ -115,7 +115,7 @@ git push -u origin testbranch
 
 **Next, we need to create a folder called data, and add the data from Assignment 1 to that folder.**
 
-- We need to make sure we are working on testbranch. The command `git branch` will show where you are with the asterisk symbol in fornt of the branch name.
+- We need to make sure we are working on testbranch. The command `git branch` will show where you are with the asterisk symbol in front of the branch name.
 
 ```bash
 git branch
@@ -216,7 +216,7 @@ git push
 \newpage
 ### 7. Annotated tag
 
-**The next step, we need to tag the commit of sloving merge conflict v1.0 on main using an annotated tag.**
+**The next step, we need to tag the commit of solving merge conflict v1.0 on main using an annotated tag.**
 
 - Before creating the tag, we can use `git log --oneline` to check the commit history and find the commit that we want to tag.
 
@@ -280,7 +280,7 @@ git log --oneline
 ![](images/git_log.png)
 
 \newpage
-### 10. Add a simple plot and undo the commit without losing local changes
+### 10. Undo the commit 
 
 **In this step, we need to create a new section in example.qmd that includes an easy plot. In this part, we commit the change and use the command line interface to undo the commit without losing the local changes.**
 
@@ -308,3 +308,14 @@ git reset --soft HEAD~1
 ```bash
 git status
 ```
+![](images/undo.png)
+
+
+\newpage
+# Acknowledging the use of AI
+
+I used ChatGPT (https://chatgpt.com/) help to check my writing grammar, improve sentence flow and identify possible errors in my assignment guide, across multiple iterations. However, I modified the outputs by selecting relevant suggestions, rewriting the wording to match my own explanation style, and checking that the Git commands and descriptions matched the steps I completed myself.
+
+
+
+
