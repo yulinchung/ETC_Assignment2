@@ -14,3 +14,18 @@ This is an example .qmd for my assignment2.
 
 ### Changes from both branches
 This section combines the changes made on branches of main and testbranch. The main branch was modified to create a merge conflict and testbranch was modified earlier to demonstrate branch-based changes.
+
+### Simple plot
+This section includes a simple plot using the `cars` dataset.
+```{r}
+library(ggplot2)
+
+ggplot(cars, aes(x = speed, y = dist)) +
+  geom_point() +
+  labs(
+    title = "Speed and Stopping Distance",
+    x = "Speed",
+    y = "Distance"
+  )
+```
+
