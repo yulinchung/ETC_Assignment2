@@ -278,3 +278,33 @@ git log --oneline
 ```
 
 ![](images/git_log.png)
+
+\newpage
+### 10. Add a simple plot and undo the commit without losing local changes
+
+**In this step, we need to create a new section in example.qmd that includes an easy plot. In this part, we commit the change and use the command line interface to undo the commit without losing the local changes.**
+
+- After saving example.qmd, we add the modified file to the staging area and commit the change.
+
+```bash
+git add example.qmd
+git commit -m "Add simple plot"
+```
+
+- We can use git log --oneline to check that the commit Add simple plot has been created.
+
+```bash
+git log --oneline
+```
+
+- To undo the latest commit without losing the local changes, we use `git reset` to move back to a previous commit. The option `--soft` removes the most recent commit, but keeps the changes in the staging area, and `HEAD~1` means one commit before the current commit.
+
+```bash
+git reset --soft HEAD~1
+```
+
+- Finally, we use git status to check the result.
+
+```bash
+git status
+```

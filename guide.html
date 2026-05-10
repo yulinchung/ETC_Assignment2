@@ -97,6 +97,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#annotated-tag" id="toc-annotated-tag" class="nav-link" data-scroll-target="#annotated-tag">7. Annotated tag</a></li>
   <li><a href="#deleting-branch-locally-and-on-the-remote" id="toc-deleting-branch-locally-and-on-the-remote" class="nav-link" data-scroll-target="#deleting-branch-locally-and-on-the-remote">8. Deleting branch locally and on the remote</a></li>
   <li><a href="#show-the-commit-log-in-condensed-form-in-the-terminal." id="toc-show-the-commit-log-in-condensed-form-in-the-terminal." class="nav-link" data-scroll-target="#show-the-commit-log-in-condensed-form-in-the-terminal.">9. Show the commit log in condensed form in the terminal.</a></li>
+  <li><a href="#add-a-simple-plot-and-undo-the-commit-without-losing-local-changes" id="toc-add-a-simple-plot-and-undo-the-commit-without-losing-local-changes" class="nav-link" data-scroll-target="#add-a-simple-plot-and-undo-the-commit-without-losing-local-changes">10. Add a simple plot and undo the commit without losing local changes</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="guide.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -350,6 +351,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><img src="images/git_log.png" class="img-fluid"></p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="add-a-simple-plot-and-undo-the-commit-without-losing-local-changes" class="level3">
+<h3 class="anchored" data-anchor-id="add-a-simple-plot-and-undo-the-commit-without-losing-local-changes">10. Add a simple plot and undo the commit without losing local changes</h3>
+<p><strong>In this step, we need to create a new section in example.qmd that includes an easy plot. In this part, we commit the change and use the command line interface to undo the commit without losing the local changes.</strong></p>
+<ul>
+<li>After saving example.qmd, we add the modified file to the staging area and commit the change.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add example.qmd</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add simple plot"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>We can use git log –oneline to check that the commit Add simple plot has been created.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>To undo the latest commit without losing the local changes, we use <code>git reset</code> to move back to a previous commit. The option <code>--soft</code> removes the most recent commit, but keeps the changes in the staging area, and <code>HEAD~1</code> means one commit before the current commit.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--soft</span> HEAD~1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Finally, we use git status to check the result.</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 
