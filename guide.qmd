@@ -46,7 +46,7 @@ format:
 ---
 ```
 
-- The command `ls` will list all of the file in "ETC5513_Assignment2". It can be seen that we successfully knitted the file into HTML when there is a file call "example.html"
+- The command `ls` will list all of the files in "ETC5513_Assignment2". It can be seen that we successfully knitted the file into HTML when there is a file call "example.html"
 
 ![](images/html_result.png)
 
@@ -224,7 +224,7 @@ git push
 git log --oneline
 ```
 
-- The command `git tag -a` means to create an annotated tag and the option `-m` allows us to write a message for the tag. Because I made another commit after resolving the merge conflict, we need to type the commit hash to make sure we add the annotated tag on the write place.
+- The command `git tag -a` means to create an annotated tag and the option `-m` allows us to write a message for the tag. Because I made another commit after resolving the merge conflict, we need to type the commit hash to make sure we add the annotated tag on the right place.
 
 ```bash
 git tag -a v1.0 27aeb14 -m "Version 1.0"
@@ -314,7 +314,7 @@ git status
 \newpage
 # Acknowledging the use of AI
 
-I used ChatGPT (https://chatgpt.com/) help to check my writing grammar, improve sentence flow and identify possible errors in my assignment guide, across multiple iterations. However, I modified the outputs by selecting relevant suggestions, rewriting the wording to match my own explanation style, and checking that the Git commands and descriptions matched the steps I completed myself.
+I used ChatGPT (https://chatgpt.com/) to help me check my writing grammar, improve sentence flow, checking the Git commandsand and identify possible errors in my assignment, across multiple iterations. However, I modified the AI outputs and rewriting the words to make it follow my explanation style, make sure I completely present my efforts on the assignment.
 
 
 
